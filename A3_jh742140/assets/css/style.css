@@ -1,0 +1,264 @@
+/* ===== UNIVERSAL SELECTOR ===== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* ===== ROOT VARIABLES ===== */
+:root {
+    --primary-bg: #000;
+    --primary-text: #00ff00;
+    --secondary-text: #00cc00;
+    --border-color: #00ff00;
+    --hover-color: #00ff00;
+}
+
+/* ===== MULTIPLE SELECTOR ===== */
+body, html {
+    background-color: var(--primary-bg);
+    color: var(--primary-text);
+    font-family: 'Courier New', monospace;
+    line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: monospace;
+    margin-bottom: 1rem;
+    color: var(--primary-text);
+}
+
+/* ===== LINK STYLING ===== */
+a {
+    color: var(--primary-text);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+a:hover {
+    color: var(--hover-color);
+    text-shadow: 0 0 10px var(--hover-color);
+}
+
+a:visited {
+    color: var(--secondary-text);
+}
+
+a:active {
+    color: #00dd00;
+}
+
+/* ===== ATTRIBUTE SELECTOR ===== */
+a[href^="http"]::after {
+    content: " ↗";
+}
+
+a[target="_blank"]::after {
+    content: " (새창)";
+    font-size: 0.8em;
+}
+
+/* ===== BUTTON STYLING ===== */
+button {
+    background-color: transparent;
+    color: var(--primary-text);
+    border: 2px solid var(--border-color);
+    cursor: pointer;
+    padding: 10px 20px;
+    margin: 5px;
+    font-family: monospace;
+    font-size: 18px;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: var(--primary-text);
+    color: var(--primary-bg);
+    box-shadow: 0 0 20px var(--primary-text);
+}
+
+/* ===== IMAGE STYLING WITH BORDER, PADDING, MARGIN ===== */
+img {
+    border: 3px solid var(--border-color);
+    padding: 10px;
+    margin: 15px;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 30px var(--primary-text);
+}
+
+/* ===== LIST STYLING ===== */
+/* Unordered List */
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+ul li::before {
+    content: "▶ ";
+    color: var(--primary-text);
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+/* Ordered List */
+ol {
+    list-style: none;
+    counter-reset: item;
+    padding-left: 0;
+}
+
+ol li {
+    counter-increment: item;
+    margin-bottom: 10px;
+}
+
+ol li::before {
+    content: counter(item) ". ";
+    color: var(--primary-text);
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+/* ===== TABLE STYLING ===== */
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 20px 0;
+    border: 2px solid var(--border-color);
+}
+
+th, td {
+    border: 1px solid var(--border-color);
+    padding: 15px;
+    text-align: left;
+}
+
+th {
+    background-color: var(--primary-text);
+    color: var(--primary-bg);
+    font-weight: bold;
+}
+
+/* CHILD SELECTOR */
+table > tbody > tr:nth-child(even) {
+    background-color: rgba(0, 255, 0, 0.1);
+}
+
+/* ===== FORM STYLING ===== */
+form {
+    background-color: rgba(0, 255, 0, 0.05);
+    border: 2px solid var(--border-color);
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 5px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: var(--primary-text);
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+textarea,
+select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    background-color: var(--primary-bg);
+    color: var(--primary-text);
+    border: 2px solid var(--border-color);
+    font-family: monospace;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    outline: none;
+    box-shadow: 0 0 10px var(--primary-text);
+}
+
+textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+/* ===== PSEUDO-ELEMENT SELECTOR ===== */
+p::first-letter {
+    font-size: 2em;
+    font-weight: bold;
+    color: var(--hover-color);
+}
+
+h1::before {
+    content: "> ";
+    color: var(--primary-text);
+}
+
+/* ===== SIBLING SELECTOR ===== */
+h2 ~ p {
+    text-indent: 2em;
+}
+
+/* ===== ADJACENT SIBLING SELECTOR ===== */
+h1 + p {
+    font-size: 1.2em;
+    margin-top: 10px;
+    color: var(--secondary-text);
+}
+
+/* ===== FOOTER ===== */
+footer {
+    margin-top: 50px;
+    padding: 20px;
+    text-align: center;
+    border-top: 2px solid var(--border-color);
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+
+/* Mobile (default) */
+body {
+    padding: 10px;
+}
+
+/* Tablet */
+@media (min-width: 768px) {
+    body {
+        padding: 20px;
+    }
+    
+    h1 {
+        font-size: 50px;
+    }
+    
+    button {
+        font-size: 35px;
+    }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+    body {
+        padding: 40px;
+        max-width: 1400px;
+        margin: 0 auto;
+    }
+    
+    h1 {
+        font-size: 60px;
+    }
+    
+    button {
+        font-size: 45px;
+    }
+}

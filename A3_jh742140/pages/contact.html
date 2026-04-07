@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JuhanPark_Contact</title>
+    <meta name="description" content="Contact Juhan Park - Get in touch">
+    
+    <link rel="icon" type="image/png" href="../assets/images/cmd_favicon.png">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/contact.css">
+</head>
+
+<body>
+
+    <h1>Contact Me</h1>
+    <p>Feel free to reach out! I'm always open to discussing new projects, creative ideas, or opportunities.</p>
+
+    <!-- CONTACT INFORMATION GRID -->
+    <section class="contact-info-section">
+        <h2>Get In Touch</h2>
+        
+        <div class="contact-grid">
+            <div class="contact-card">
+                <h3>📧 Email</h3>
+                <p>hijuhan0712@gmail.com</p>
+            </div>
+            
+            <div class="contact-card">
+                <h3>📱 Phone</h3>
+                <p>+1 (902) 989-4897</p>
+            </div>
+            
+            <div class="contact-card">
+                <h3>📍 Location</h3>
+                <p>Halifax, Nova Scotia</p>
+            </div>
+            
+            <div class="contact-card">
+                <h3>💼 LinkedIn</h3>
+                <p><a href="https://www.linkedin.com/in/juhan-park-696aa72a5/" target="_blank">linkedin.com/in/juhanpark</a></p>
+            </div>
+            
+            <div class="contact-card">
+                <h3>🐙 GitHub</h3>
+                <p><a href="https://github.com/Gearbox001" target="_blank">github.com/juhanpark</a></p>
+            </div>
+            
+        </div>
+    </section>
+
+    <!-- CONTACT FORM -->
+    <section class="contact-form-section">
+        <h2>Send Me a Message</h2>
+        
+        <form id="contactForm" onsubmit="return handleContactSubmit(event)">
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="firstName">First Name: *</label>
+                    <input type="text" 
+                           id="firstName" 
+                           name="firstName" 
+                           required
+                           placeholder="John"
+                           aria-label="Enter your first name">
+                </div>
+                
+                <div class="form-group">
+                    <label for="lastName">Last Name: *</label>
+                    <input type="text" 
+                           id="lastName" 
+                           name="lastName" 
+                           required
+                           placeholder="Doe"
+                           aria-label="Enter your last name">
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label for="email">Email Address: *</label>
+                <input type="email" 
+                       id="email" 
+                       name="email" 
+                       required
+                       placeholder="john.doe@example.com"
+                       aria-label="Enter your email address">
+            </div>
+            
+            <div class="form-group">
+                <label for="subject">Subject: *</label>
+                <select id="subject" 
+                        name="subject" 
+                        required
+                        aria-label="Select message subject">
+                    <option value="">-- Select a Subject --</option>
+                    <option value="general">General Inquiry</option>
+                    <option value="project">Project Collaboration</option>
+                    <option value="job">Job Opportunity</option>
+                    <option value="feedback">Feedback</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="message">Message: *</label>
+                <textarea id="message" 
+                          name="message" 
+                          required
+                          rows="8"
+                          placeholder="Write your message here..."
+                          aria-label="Enter your message"></textarea>
+            </div>
+            
+            <div class="form-group checkbox-group">
+                <input type="checkbox" 
+                       id="newsletter" 
+                       name="newsletter"
+                       aria-label="Subscribe to newsletter">
+                <label for="newsletter">Subscribe to my newsletter</label>
+            </div>
+            
+            <div class="form-actions">
+                <button type="submit">Send Message</button>
+                <button type="reset">Clear Form</button>
+            </div>
+        </form>
+    </section>
+
+    <!-- SOCIAL LINKS -->
+    <section class="social-section">
+        <h2>Connect With Me</h2>
+        <div class="social-links">
+            <a href="https://twitter.com" target="_blank" class="social-link">Twitter</a>
+            <a href="https://linkedin.com" target="_blank" class="social-link">LinkedIn</a>
+            <a href="https://github.com" target="_blank" class="social-link">GitHub</a>
+            <a href="https://instagram.com" target="_blank" class="social-link">Instagram</a>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <a href="../index.html">
+            <img src="../assets/images/pop-up-close.png"
+                 alt="Close button - click to return to main screen"
+                 class="footer-close">
+        </a>
+        <p>Return to Home</p>
+    </footer>
+
+    <script src="../assets/scripts/contact.js"></script>
+</body>
+</html>

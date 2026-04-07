@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JuhanPark_Website</title>
+    <meta name="description" content="Juhan Park's professional portfolio website">
+    
+    <link rel="icon" type="image/png" href="assets/images/cmd_favicon.png">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/index.css">
+</head>
+
+<body>
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1 id="typing-text"></h1>
+            <p>Full-Stack Developer | Creative Coder | Problem Solver</p>
+        </div>
+    </section>
+
+    <!-- NAVIGATION SECTION WITH FLEXBOX -->
+    <nav class="main-nav">
+        <ul>
+            <li>
+                <a href="pages/profile.html">
+                    <button type="button">=> Profile</button>
+                </a>
+            </li>
+
+            <li>
+                <a href="pages/skills.html">
+                    <button type="button">=> Skills</button>
+                </a>
+            </li>
+            
+            <li>
+                <a href="pages/contact.html">
+                    <button type="button">=> Contact</button>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- THEME TOGGLE BUTTON -->
+    <div class="theme-button">
+        <button onclick="changeTheme()" 
+            onmouseover="hoverSmile()" 
+            onmouseout="leaveSmile()"
+            aria-label="Change theme">
+            <img src="assets/images/smile.png" alt="Smile face - click to change theme">
+        </button>
+    </div>
+
+    <!-- AUDIO PLAYER -->
+    <audio controls aria-label="Background music player">
+        <source src="assets/audios/Rick Astley - Never Gonna Give You Up (Official Music Video).mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; 2026 Juhan Park. All rights reserved.</p>
+    </footer>
+
+    <script src="assets/scripts/main.js"></script>
+</body>
+</html>
